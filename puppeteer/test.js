@@ -3,12 +3,12 @@ const puppeteer = require('puppeteer');
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   try{
-    await page.goto('https://8081-decbafdfcbbeeafbacbbebaebdfabfeeaea.examlyiopb.examly.io/');
+    await page.goto('https://8081-decbafdfcbbeeafbacbbeafafdabfeacefc.examlyiopb.examly.io/');
     await page.setViewport({
       width:1200,
       height:800,
     })
-    await page.waitForSelector('title');
+    await page.waitForSelector('h1');
     console.log('TESTCASE:testcase1:success');
   }
   catch(e){
@@ -23,18 +23,18 @@ const puppeteer = require('puppeteer');
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   try{
-    await page.goto('https://8081-decbafdfcbbeeafbacbbebaebdfabfeeaea.examlyiopb.examly.io/');
+    await page.goto('https://8081-decbafdfcbbeeafbacbbeafafdabfeacefc.examlyiopb.examly.io/');
     await page.setViewport({
       width:1200,
       height:800,
     })
-    await page.waitForSelector('form');
+    await page.waitForSelector('img');
     const result1 = await page.evaluate(()=>{
-      let heading = document.querySelector("#TitleName");
+      let heading = document.querySelector("#titleName");
       return heading.innerHTML;
     })
     const result2 = await page.evaluate(()=>{
-      let heading = document.querySelector("#yourName");
+      let heading = document.querySelector("#titleImage");
       return heading.innerHTML;
     })
     console.log('TESTCASE:testcase2:success');
@@ -51,18 +51,18 @@ const puppeteer = require('puppeteer');
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   try{
-    await page.goto('https://8081-decbafdfcbbeeafbacbbebaebdfabfeeaea.examlyiopb.examly.io/');
+    await page.goto('https://8081-decbafdfcbbeeafbacbbeafafdabfeacefc.examlyiopb.examly.io/');
     await page.setViewport({
       width:1200,
       height:800,
     })
-    await page.waitForSelector('input');
+    await page.waitForSelector('h3');
     const result1 = await page.evaluate(()=>{
-      let button = document.querySelector("#textBox");
+      let button = document.querySelector("#favFood1");
       return button.innerHTML;
     })
     const result2 = await page.evaluate(()=>{
-      let button = document.querySelector("#textBox1");
+      let button = document.querySelector("#foodDescription2");
       return button.innerHTML;
     })
     console.log('TESTCASE:testcase3:success');
@@ -79,18 +79,18 @@ const puppeteer = require('puppeteer');
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   try{
-    await page.goto('https://8081-decbafdfcbbeeafbacbbebaebdfabfeeaea.examlyiopb.examly.io/');
+    await page.goto('https://8081-decbafdfcbbeeafbacbbeafafdabfeacefc.examlyiopb.examly.io/');
     await page.setViewport({
       width:1200,
       height:800,
     })
-    await page.waitForSelector('label');
+    await page.waitForSelector('p');
     const result1 = await page.evaluate(()=>{
-      let heading = document.querySelector("#textBox2");
+      let heading = document.querySelector("#favFoodImage1");
       return heading.innerHTML;
     })
     const result2 = await page.evaluate(()=>{
-      let heading = document.querySelector("#field1");
+      let heading = document.querySelector("#favFoodImage2");
       return heading.innerHTML;
     })
     console.log('TESTCASE:testcase4:success');
@@ -107,17 +107,17 @@ const puppeteer = require('puppeteer');
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   try{
-    await page.goto('https://8081-decbafdfcbbeeafbacbbebaebdfabfeeaea.examlyiopb.examly.io/');
+    await page.goto('https://8081-decbafdfcbbeeafbacbbeafafdabfeacefc.examlyiopb.examly.io/');
     await page.setViewport({
       width:1200,
       height:800,
     })
     const result1 = await page.evaluate(()=>{
-      let textBox = document.querySelector("#yesMayBe");
+      let textBox = document.querySelector("#favFood2");
       return textBox.innerHTML;
     })
     const result2 = await page.evaluate(()=>{
-      let textBox = document.querySelector("#bestColour");
+      let textBox = document.querySelector("#favFood3");
       return textBox.innerHTML;
     })
     console.log('TESTCASE:testcase5:success');
@@ -134,14 +134,13 @@ const puppeteer = require('puppeteer');
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   try{
-    await page.goto('https://8081-decbafdfcbbeeafbacbbebaebdfabfeeaea.examlyiopb.examly.io/');
+    await page.goto('https://8081-decbafdfcbbeeafbacbbeafafdabfeacefc.examlyiopb.examly.io/');
     await page.setViewport({
       width:1200,
       height:800,
     })
-    await page.waitForSelector('img');
     const result1 = await page.evaluate(()=>{
-      let textBox = document.querySelector("#backgroundImage");
+      let textBox = document.querySelector("#foodDescription3");
       return textBox.innerHTML;
     })
     console.log('TESTCASE:testcase6:success');
