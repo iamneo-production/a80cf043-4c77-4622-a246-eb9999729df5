@@ -3,12 +3,11 @@ const puppeteer = require('puppeteer');
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   try{
-    await page.goto('https://8081-decbafdfcbbeeafbacbbeafafdabfeacefc.examlyiopb.examly.io/');
+    await page.goto('https://8081-decbafdfcbbeeafbacbbedcdbffcabdf.examlyiopb.examly.io/');
     await page.setViewport({
       width:1200,
       height:800,
     })
-    await page.waitForSelector('h1');
     console.log('TESTCASE:testcase1:success');
   }
   catch(e){
@@ -23,19 +22,19 @@ const puppeteer = require('puppeteer');
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   try{
-    await page.goto('https://8081-decbafdfcbbeeafbacbbeafafdabfeacefc.examlyiopb.examly.io/');
+    await page.goto('https://8081-decbafdfcbbeeafbacbbedcdbffcabdf.examlyiopb.examly.io/');
     await page.setViewport({
       width:1200,
       height:800,
     })
-    await page.waitForSelector('img');
+    await page.waitForSelector('h1');
     const result1 = await page.evaluate(()=>{
-      let heading = document.querySelector("#titleName");
-      return heading.innerHTML;
+      let heading1 = document.querySelector("#heading1");
+      return heading1.innerHTML;
     })
     const result2 = await page.evaluate(()=>{
-      let heading = document.querySelector("#titleImage");
-      return heading.innerHTML;
+      let heading2 = document.querySelector("#heading2");
+      return heading2.innerHTML;
     })
     console.log('TESTCASE:testcase2:success');
   }
@@ -51,19 +50,15 @@ const puppeteer = require('puppeteer');
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   try{
-    await page.goto('https://8081-decbafdfcbbeeafbacbbeafafdabfeacefc.examlyiopb.examly.io/');
+    await page.goto('https://8081-decbafdfcbbeeafbacbbedcdbffcabdf.examlyiopb.examly.io/');
     await page.setViewport({
       width:1200,
       height:800,
     })
-    await page.waitForSelector('h3');
+    await page.waitForSelector('img');
     const result1 = await page.evaluate(()=>{
-      let button = document.querySelector("#favFood1");
-      return button.innerHTML;
-    })
-    const result2 = await page.evaluate(()=>{
-      let button = document.querySelector("#foodDescription2");
-      return button.innerHTML;
+      let runScored = document.querySelector("#runScored");
+      return runScored.innerHTML;
     })
     console.log('TESTCASE:testcase3:success');
   }
@@ -79,19 +74,19 @@ const puppeteer = require('puppeteer');
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   try{
-    await page.goto('https://8081-decbafdfcbbeeafbacbbeafafdabfeacefc.examlyiopb.examly.io/');
+    await page.goto('https://8081-decbafdfcbbeeafbacbbedcdbffcabdf.examlyiopb.examly.io/');
     await page.setViewport({
       width:1200,
       height:800,
     })
-    await page.waitForSelector('p');
+    await page.waitForSelector('table');
     const result1 = await page.evaluate(()=>{
-      let heading = document.querySelector("#favFoodImage1");
-      return heading.innerHTML;
+      let ballFaced = document.querySelector("#ballFaced");
+      return ballFaced.innerHTML;
     })
     const result2 = await page.evaluate(()=>{
-      let heading = document.querySelector("#favFoodImage2");
-      return heading.innerHTML;
+      let noOfFours = document.querySelector("#noOfFours");
+      return noOfFours.innerHTML;
     })
     console.log('TESTCASE:testcase4:success');
   }
@@ -107,18 +102,19 @@ const puppeteer = require('puppeteer');
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   try{
-    await page.goto('https://8081-decbafdfcbbeeafbacbbeafafdabfeacefc.examlyiopb.examly.io/');
+    await page.goto('https://8081-decbafdfcbbeeafbacbbedcdbffcabdf.examlyiopb.examly.io/');
     await page.setViewport({
       width:1200,
       height:800,
     })
+    await page.waitForSelector('th');
     const result1 = await page.evaluate(()=>{
-      let textBox = document.querySelector("#favFood2");
-      return textBox.innerHTML;
+      let noOfSixes = document.querySelector("#noOfSixes");
+      return noOfSixes.innerHTML;
     })
     const result2 = await page.evaluate(()=>{
-      let textBox = document.querySelector("#favFood3");
-      return textBox.innerHTML;
+      let strikeRate = document.querySelector("#strikeRate");
+      return strikeRate.innerHTML;
     })
     console.log('TESTCASE:testcase5:success');
   }
@@ -130,18 +126,25 @@ const puppeteer = require('puppeteer');
   }
 })();
 
+
+
 (async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   try{
-    await page.goto('https://8081-decbafdfcbbeeafbacbbeafafdabfeacefc.examlyiopb.examly.io/');
+    await page.goto('https://8081-decbafdfcbbeeafbacbbedcdbffcabdf.examlyiopb.examly.io/');
     await page.setViewport({
       width:1200,
       height:800,
     })
+    await page.waitForSelector('tr');
     const result1 = await page.evaluate(()=>{
-      let textBox = document.querySelector("#foodDescription3");
-      return textBox.innerHTML;
+      let batsmanList = document.querySelector("#batsmanList");
+      return batsmanList.innerHTML;
+    })
+    const result2 = await page.evaluate(()=>{
+      let batsmanName = document.querySelector("#batsmanName");
+      return batsmanName.innerHTML;
     })
     console.log('TESTCASE:testcase6:success');
   }
